@@ -122,6 +122,14 @@ LOCAL_SRC_FILES:= \
 	android/graphics/Utils.cpp \
 	android/graphics/Xfermode.cpp \
 	android/graphics/YuvToJpegEncoder.cpp \
+	android_bluetooth_HeadsetBase.cpp \
+	android_bluetooth_common.cpp \
+	android_bluetooth_BluetoothAudioGateway.cpp \
+	android_bluetooth_BluetoothSocket.cpp \
+	android_bluetooth_c.c \
+	android_server_BluetoothService.cpp \
+	android_server_BluetoothEventLoop.cpp \
+	android_server_BluetoothA2dpService.cpp \
 	android_media_AudioRecord.cpp \
 	android_media_AudioSystem.cpp \
 	android_media_AudioTrack.cpp \
