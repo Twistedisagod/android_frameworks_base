@@ -435,7 +435,7 @@ public class BluetoothA2dpService extends IBluetoothA2dp.Stub {
     public synchronized int getPriority(BluetoothDevice device) {
         mContext.enforceCallingOrSelfPermission(BLUETOOTH_PERM, "Need BLUETOOTH permission");
         return Settings.Secure.getInt(mContext.getContentResolver(),
-                Settings.Secure.getBluetoothA2dpSinkPriorityKey(device.getAddress()),
+                Settings.Global.getBluetoothA2dpSinkPriorityKey(device.getAddress()),
                 BluetoothA2dp.PRIORITY_UNDEFINED);
     }
 
@@ -443,7 +443,7 @@ public class BluetoothA2dpService extends IBluetoothA2dp.Stub {
         mContext.enforceCallingOrSelfPermission(BLUETOOTH_ADMIN_PERM,
                                                 "Need BLUETOOTH_ADMIN permission");
         return Settings.Secure.putInt(mContext.getContentResolver(),
-                Settings.Secure.getBluetoothA2dpSinkPriorityKey(device.getAddress()), priority);
+                Settings.Global.getBluetoothA2dpSinkPriorityKey(device.getAddress()), priority);
     }
 
     public synchronized boolean allowIncomingConnect(BluetoothDevice device, boolean value) {
